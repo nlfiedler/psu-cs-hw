@@ -1,0 +1,99 @@
+<HTML>
+
+<HEAD>
+<TITLE>Requirements Document</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFEE" TEXT="#004080" LINK="#0000FF" VLINK="#408080" ALINK="#FF0000">
+
+<H3>Glossary</H3>
+
+<UL>
+
+  <LI>Vertex - a node specified by its (x,y) 2D coordinates
+  <LI>Edge - a pair of vertices:
+
+  <UL>
+
+    <LI>Directed - a ordered pairs of vertices
+    <LI>Undirected - a unordered pairs of vertices
+
+  </UL>
+
+  <LI>Graph - a list of vertices and edges:
+
+  <UL>
+    <LI>Directed - a list of vertices and directed edges
+    <LI>Undirected - a list of vertices and undirected edges
+    <LI>Methods of graph representation:
+
+    <UL>
+
+      <LI>Adjacency Matrix - a two dimensional array used to represent a graph. For each edge (u,v), set A[u,v] = 1 if the edge exists; if no edge exists, set A[u,v] = 0.
+
+      <LI>Adjacency List - a one dimensional list of vertices where each vertex points to another list of adjacent vertices for each vertex
+
+      <LI>Edge List - a list of edge costs
+      <LI>Vertex List - a list of vertices
+
+    </UL>
+  </UL>
+</UL>
+
+<HR>
+
+
+<H3>Data Dictionary</H3>
+
+<BR><BR>
+X - Coordinate for printing on screen<BR>
+Y - Coordinate for printing on Screen<BR>
+Get X/Y -  return coordinate values<BR>
+Set X/Y-  change the coordinate vales<BR>
+<BR>
+
+Num - Number assign to newly created vertex<BR>
+Known - flag to seen if vertex has been visited<BR>
+Cost - Cost of visiting a vertex<BR>
+Adjust - sets attributes of Vertex<BR>
+Cost - just changes cost attribute<BR>
+= allows vertices to be copied<BR>
+< allows vertices to be compared<BR>
+<BR>
+
+Vertex1 - starting point of edge<BR>
+Vertex2 - ending point of edge<BR>
+Cost - cost associated with edge<BR>
+Directed Flag - where edge is directed or not<BR>
+= allows edges to be copied<BR>
+==, <, > allows comparisons with edges<BR>
+<BR>
+
+U - Number of vertices used<BR>
+V[U]- Array of vertices<BR>
+M[U,U]  - Adjacency Matrix to keep edges and costs<BR>
+AddVertex - Adds vertex to matrix<BR>
+RemoveVertex - removes one<BR>
+RandomVertex - Adds a specified number of random vertices<BR>
+AddEdge - Adds an edge to the matrix<BR>
+RemoveEdge - removes edge from matrix<BR>
+RandomEdge - adds specified number of random edges<BR>
+DFS - preforms Depth first search on graph<BR>
+BFS -preforms Breadth first search on graph<BR>
+Search - finds a vertex<BR>
+Kruskal - preforms Kruskal’s algorithm<BR>
+Prim - preforms Prim’s algorithm<BR>
+MST - Finds Minimum Spanning Tree<BR>
+Shortestpath - finds the shortest path to a vertex<BR>
+Read/Write File - gets and puts info in AdjMatrix, AdjList and vertex list formats<BR>
+
+<BR>
+<BR>
+Back to the <a HREF="model.html">System Model.</a>
+<BR><BR>
+Back to the <a HREF="index.html">Project Index.</a>
+
+
+</BODY>
+
+</HTML>

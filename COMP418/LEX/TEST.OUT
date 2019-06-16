@@ -1,0 +1,17 @@
+yylval: 0	token: 279	yytext: not
+yylval: 0	token: 266	yytext: array
+yylval: 0	token: 286	yytext: [
+yylval: 110	token: 262	yytext: -
+yylval: 0	token: 259	yytext: 8
+yylval: 1	token: 258	yytext: E
+yylval: 0	token: 281	yytext: .
+yylval: 2	token: 259	yytext: 3
+yylval: 0	token: 280	yytext: ..
+yylval: 3	token: 259	yytext: 4
+yylval: 0	token: 281	yytext: .
+yylval: 0	token: 287	yytext: ]
+yylval: 0	token: 267	yytext: of
+yylval: 0	token: 269	yytext: real
+yylval: 113	token: 262	yytext: or
+yylval: 115	token: 261	yytext: mod
+yylval: 0	token: 281	yytext: .

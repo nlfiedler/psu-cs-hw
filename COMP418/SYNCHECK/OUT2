@@ -1,0 +1,7 @@
+7 SYNTAX ERROR: Cannot have ; before else
+7 SYNTAX ERROR: Missing keyword else in if statement
+7 SYNTAX ERROR: Not a valid statement
+8 SYNTAX ERROR: Not a valid statement
+8 SYNTAX ERROR: Missing keyword end in compound statement
+8 SYNTAX ERROR: Missing ; after end of subprogram declaration
+8 SYNTAX ERROR: Missing keyword begin in compound statement.

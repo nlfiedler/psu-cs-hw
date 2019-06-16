@@ -1,0 +1,11 @@
+# Make file for mylex.c
+
+SOURCES=lex.yy.c symtab.c lex.c
+PRODUCT=lextest
+CC=gcc
+CFLAGS=-O
+
+all: $(PRODUCT)
+
+$(PRODUCT): $(SOURCES)
+	$(CC) $(CFLAGS) -o $(PRODUCT) $(SOURCES)

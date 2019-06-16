@@ -1,0 +1,260 @@
+<HTML>
+
+<HEAD>
+<TITLE>Requirements Specification</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFEE" TEXT="#004080" LINK="#0000FF" VLINK="#408080" ALINK="#FF0000">
+
+<H3>Requirements Specification</H3>
+
+<OL>
+<LI><A NAME = "RS - menu interface"></A><A HREF = "freq_doc.html#FRD - menu interface">Menu Interface:</A><BR>
+The menu interface shall consist of a menu bar at the top of the screen.  Keywords (e.g. File, Vertex, Edge, Search, MST) will appear on the bar.  The keyword will be accessed via a mouse or keyboard.  Each keyword in turn will have a pull-down menu with actions pertaining to the keyword.
+
+<LI><A NAME = "RS - file operations"></A><A HREF = "freq_doc.html#FRD - file operations">File Operations:</A><BR>
+From main menu keyword &quot;File&quot; a new pull down menu will have these keywords: New/Open, Close, Save, Save As, Backup, Other, Print, About, and Exit.  Access will be via the mouse or keyboard.
+
+<OL>
+<LI>New/Open - Prompt for file type. File type selection will be via mouse. Once file type has been selected the user will be promoted for file path and name via keyboard input.
+<OL>
+<LI>Vertex List - for complete graphs 
+<LI>Adjacency Matrix 
+<LI>Adjacency List 
+<LI>Edge List 
+</OL>
+
+<LI>Save - The file being edited will be saved to the disk and overwrite the file on the disk. Command will be initiated via the mouse.  
+<LI>Save As - From Save As a new pull down menu will have these file types: File type selection will be via mouse. Once file type has been selected the user will be prompted for file path and name via keyboard input. The graph will be saved to disk as an alternative format data file.
+
+
+
+<OL>
+<LI>Vertex List - for complete graphs 
+<LI>Adjacency Matrix 
+<LI>Adjacency List 
+<LI>Edge List 
+</OL>
+File type selection will be via mouse. Once file type has been selected the user will be prompted for file path and name via keyboard input.  The graph will be saved to disk as an alternative format data file.
+
+<LI>Exit - Quit the program (will save open files fisrt).
+</OL>
+
+<LI><A NAME = "RS - vertex operations"></A>
+ <A HREF = "freq_doc.html#FRD - vertex operations">Vertex operations</A>.
+
+<OL>
+<LI>
+<EM>Function:</EM> <STRONG>Random Generation </STRONG><BR>
+<EM>Description:</EM> Generate a random (x,y) point using the system random number generator.<BR>
+<EM>Inputs:</EM> prompt for n, the number of vertices to be randomly generated. Range of n (1...50).<BR>
+<EM>Source:</EM> User input from the keyboard<BR>
+<EM>Output:</EM> A vertex with center at the (x,y) point.<BR>
+<EM>Destination:</EM> The graph and its' file.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> No conflicting vertex in the same area.<BR>
+<EM>Post-condition:</EM> Graph will have n additional vertices.<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> Allows a random graph to be set up.
+
+<LI>
+<EM>Function:</EM> <STRONG>Add</STRONG><BR>
+<EM>Description:</EM> Adds a vertex to the current graph. The user selects its position.<BR>
+<EM>Inputs:</EM> Vertex position, Vertex identifier.<BR>
+<EM>Source:</EM> Vertex position is selected by user mouse click. Vertex identifier by keyboard input.<BR>
+<EM>Output:</EM> Vertex is added to the graph.<BR>
+<EM>Destination:</EM> Vertex is added to the screen. <BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> No conflicting vertex in the same area.<BR>
+<EM>Post-condition:</EM> Graph will have an additional vertex.<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> Allows the user to create and modify a graph as desired.
+
+<LI>
+<EM>Function:</EM> <STRONG>Remove</STRONG> a vertex from the current graph<BR>
+<EM>Description:</EM> Remove the selected vertex from the current graph.<BR>
+<EM>Inputs:</EM> Vertex position or vertex identifier.<BR>
+<EM>Source:</EM> Vertex position is selected by user mouse click. Vertex identifier by keyboard input.<BR>
+<EM>Output:</EM> Vertex is removed from the graph.<BR>
+<EM>Destination:</EM> Vertex is removed from the screen.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> The graph with one less vertex.<BR>
+<EM>Post-condition:</EM> The edges to/from the deleted vertex must be removed via edge operations.<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> Allows the user to modify a graph as desired.
+</OL>
+
+
+<LI><A NAME = "RS - edge operations"></A>
+ <A HREF = "freq_doc.html#FRD - edge operations">Edge operations</A>.
+
+<OL>
+<LI>
+<EM>Function:</EM> <STRONG>Random Generation</STRONG><BR>
+<EM>Description:</EM> The system will generate n edges between randomly selected vertices.<BR>
+<EM>Inputs:</EM> Prompt for the number of vertices to create, n. Limit the vertex's (x,y) coordinates by the point size of the document (now set at 1000x1000 points).<BR>
+<EM>Source:</EM> Number will be obtained from keyboard input.<BR>
+<EM>Output:</EM> New edges are added to graph.<BR>
+<EM>Destination:</EM> New edges are drawn to screen.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> If there is an existing edge between vertices no new edge will be added.<BR>
+<EM>Post-condition:</EM> A pair of vertices with a new edge.<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> Allows a random graph to be set up.
+
+<LI>
+<EM>Function:</EM> <STRONG>Add Edge</STRONG><BR>
+<EM>Description:</EM> Adds an edge to the current graph. The user selects its position by selecting the two vertices the edge will connect.<BR>
+<EM>Inputs:</EM> The two vertex identifier.<BR>
+<EM>Source:</EM> Edge position is selected by user mouse click or keyboard input.<BR>
+<EM>Output:</EM> Edge is added to the graph.<BR>
+<EM>Destination:</EM> Vertex is added to the screen.<BR>
+Requires: An additional menu that will let the user choose directed or undirected edge.<BR>
+<EM>Pre-condition:</EM> If directed edge is selected the first input will be the "from ", the next input will be the "to".<BR>
+<EM>Post-condition:</EM> A pair of vertices with a new edge.<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> Allows the user to create and modify a graph as desired.
+
+<LI>
+<EM>Function:</EM> <STRONG>Remove an edge</STRONG><BR>
+<EM>Description:</EM> Remove an edge from the graph.<BR>
+<EM>Inputs:</EM> The two vertices from which the edge is to be removed.<BR>
+<EM>Source:</EM> The user will select the edge using the mouse or keyboard.<BR>
+<EM>Output:</EM> The graph will have one less edge.<BR>
+<EM>Destination:</EM> The screen will reflect the removal of the edge.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> N/A<BR>
+<EM>Post-condition:</EM> The graph with one less edge<BR>
+<EM>Side-effects:</EM> N/A<BR>
+<EM>Rationale:</EM> Allows the user to modify a graph as desired.
+</OL>
+
+
+<LI><A NAME = "RS - search"></A>
+         <A HREF = "freq_doc.html#FRD - search">Search operations</A>.
+
+<OL>
+<LI>
+<EM>Function:</EM> <STRONG>DFS</STRONG><BR>
+<EM>Description:</EM> Perform a Depth First Search on a graph to demonstrate its application.<BR>
+<EM>Inputs:</EM> The user will be prompted to specify the root vertex and goal vertex.<BR>
+<EM>Source:</EM> Current graph and user input.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> None<BR>
+<EM>Post-condition:</EM> None<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale: To demonstrate its application in graph theory.</EM>
+
+<LI>
+<EM>Function:</EM> <STRONG>BFS</STRONG><BR>
+<EM>Description:</EM> Perform a Breath First Search on a graph graph to demonstrate its application.<BR>
+<EM>Inputs:</EM> The user will be prompted to specify the root vertex and goal vertex.<BR>
+<EM>Source:</EM> Current graph and user input.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> None<BR>
+<EM>Post-condition:</EM> None<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale: To demonstrate its application in graph theory.</EM>
+
+<LI>
+<EM>Function:</EM> <STRONG>Both</STRONG><BR>
+<EM>Description:</EM> Perfom both a Depth-First and Breath-First searches on a graph to demonstrate their application and difference.<BR>
+<EM>Inputs:</EM> The user will be prompted to specify the root vertex and goal vertex.<BR>
+<EM>Source:</EM> Current graph and user input.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> None<BR>
+<EM>Post-condition:</EM> None<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> To compare both methods at the same time.
+</OL>
+
+
+<LI><A NAME = "RS - MST"></A>
+         <A HREF = "freq_doc.html#FRD - MST">MST operations</A>.
+
+<OL>
+<LI>
+<EM>Function:</EM> <STRONG>Kruskal's MST</STRONG><BR>
+<EM>Description:</EM> Performs Kruskal's MST on the graph one edge at a time.<BR>
+<EM>Inputs:</EM> None<BR>
+<EM>Source:</EM> Current graph.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated to show MST.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> N/A<BR>
+<EM>Post-condition:</EM> N/A<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> To demonstrate the application of the algorithm.
+
+<LI>
+<EM>Function:</EM> <STRONG>Prim's MST</STRONG><BR>
+<EM>Description:</EM> <BR>
+<EM>Inputs:</EM> Prompt for starting vertex.<BR>
+<EM>Source:</EM> Current graph and user input.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated to show MST.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> N/A<BR>
+<EM>Post-condition:</EM> N/A<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> To demonstrate the application of the algorithm.
+
+<LI>
+<EM>Function:</EM> <STRONG>Both</STRONG><BR>
+<EM>Description:</EM> Allow for both methods to run simultaneously, each one doing one interation at a time.<BR>
+<EM>Inputs:</EM> None, the starting vertex for Prim's MST will be the first vertex selected by Kruskal's method.<BR>
+<EM>Source:</EM> Current Graph.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> Screen will be updated.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> N/A<BR>
+<EM>Post-condition:</EM> N/A<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> To compare both methods at the same time.
+</OL>
+
+
+<LI><A NAME = "RS - other"></A>
+         <A HREF = "freq_doc.html#FRD - other">Other operations</A>.
+
+<OL>
+<LI>
+<EM>Function:</EM> <STRONG>Shortest Path</STRONG> <BR>
+<EM>Description:</EM> Selects the shortest path between a starting vertex and a goal vertex.<BR>
+<EM>Inputs:</EM> The user will be prompted to specify the root vertex and goal vertex.<BR>
+<EM>Source:</EM> Current graph and user input.<BR>
+<EM>Output:</EM> An edge list.<BR>
+<EM>Destination:</EM> The screen will be updated.<BR>
+<EM>Requires:</EM> N/A<BR>
+<EM>Pre-condition:</EM> N/A<BR>
+<EM>Post-condition:</EM> N/A<BR>
+<EM>Side-effects:</EM> None<BR>
+<EM>Rationale:</EM> To show it's application in graph theory.
+</OL>
+
+
+<LI><A NAME = "RS - selection"></A><A HREF = "freq_doc.html#FRD - selection">Component selection</A> standards.
+
+<OL>
+<LI>Specify a vertex by using a mouse.
+<LI>Specify an edge by choosing two vertices and both mouse buttons. To specify a directed edge click and hold the left mouse button on first vertex and move the mouse to the other vertex and release the mouse button. To specify an undirected edge click and release the left mouse button on first vertex and move the mouse to the other vertex and click and release the mouse button again.
+</OL>
+
+<LI>During any interative operation, if the user enters 'a', then switch to an automatic mode in which the operation runs to completion.
+
+</OL>
+
+
+<BR><BR>
+Back to the <a HREF="index.html">Project Index.</a>
+
+
+</BODY>
+
+</HTML>

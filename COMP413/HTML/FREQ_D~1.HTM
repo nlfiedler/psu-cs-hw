@@ -1,0 +1,213 @@
+<HTML>
+
+<HEAD>
+<TITLE>Functional Requirements Definition</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFEE" TEXT="#004080" LINK="#0000FF" VLINK="#408080" ALINK="#FF0000">
+
+<H3>Functional Requirements Definition</H3>
+
+<OL>
+<LI><A NAME = "FRD - menu interface"></A>Provide a <A HREF = "req_spec.html#RS - menu interface">menu interface</A>. The interface will involve pull down menus to include: File, View, Options, Vertex, Edge, MST, Search, Other. There will be both a keyboard key sequence to activate a menu option, and the user can select an option using the mouse.<BR>
+Rationale: The user must be able to interact with the program.
+
+<OL>
+<LI><A NAME = "FRD - file operations"></A>The <STRONG>File</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - file operations">file operations</A>: New/Open, Close, Save, Save As, Backup, Other, Print, About, and Exit.<BR>
+Rationale: Allow for saving and retrieving graphs stored on disk to be used again.
+
+<OL>
+<LI>New/Open - Provides option to create a new file or open an existing one.<BR>
+Rationale: Allow the user to create a new graph or view and modify a graph stored on disk.
+<LI>Close the current graph.<BR>
+Rationale: Allow the user to close one graph so another may be opened.
+<LI>Save the current graph to a data file.<BR>
+Rationale: Allow the user to save the modifications to the graph stored on disk.
+<LI>Save As provides two functions:
+
+<OL>
+<LI>Save the current graph to a data file as an alternative format. The following formats are supported: Adjacency Matrix and Adjacency List. The format is based on the extension of the file name. If the extension is .AM the file is stored as an adjacency matrix. If the extension is .AL the file is stored as an adjacency list.<BR>
+Rationale: Allow the user to print out the different formats as a text file to see how they are represented in the graph.
+<LI>Save the current graph under an other name.<BR>
+Rationale: Allow the user to make a copy of the graph using a different file name.
+</OL>
+
+<LI>Backup will provide the following features:
+
+<OL>
+<LI>Make Backup - Save the file to the designated directory.
+Rationale: Allow the user to create a backup copy of the file in case the original file is destroyed.
+<LI>Restore From Backup - Load the file from the last saved backup copy.
+Rationale: Allow the user to load the backup copy after the original file was destroyed.
+</OL>
+
+<LI>Other provides the following options:<BR>
+
+<OL>
+<LI>Copy To - Save the graph to another document name or location and/or format.<BR>
+Rationale: Allow the user to save the document to another location on the disk.
+<LI>Discard Changes - Reread the graph from disk and lose the changes made.<BR>
+Rationale: Allow the user to throw away changes made since the reading the graph from disk.
+<LI>Rename - Change the name of the graph on disk.<BR>
+Rationale: Allow the user to give the graph a new name on disk.
+<LI>Set Document Type - Make the document read-only so it cannot be modified.<BR>
+Rationale: Allow the user to set graph as not changable.
+</OL>
+
+<LI>Print the graph to paper.<BR>
+Rationale: Allow the user to get a printout of the current graph.
+<LI>About - Displays a dialog box showing the credits.<BR>
+Rationale: Give us hard working guys some credit.
+<LI>Exit the program.<BR>
+Rationale: Allow the user to quit the program and do something else.
+
+</OL>
+
+
+<LI><A NAME = "FRD - view operations"></A>The <STRONG>View</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - view operations">view operations</A>: Zoom Out, Zoom In, Normal Size, Scale to Fit, View at %, View Options, Redraw.<BR>
+Rationale: Allow the user to change the view of the graph.
+
+<OL>
+<LI>Zoom Out - Broadens the view to see the "bigger picture".<BR>
+Rationale: Allow the user to see more of the graph at once.
+<LI>Zoom In - Narrows the view to see a smaller portion of the graph.<BR>
+Rationale: Allow the user to focus in on a portion of the graph in detail.
+<LI>Normal Size - Returns to the view to the 100% scale factor.
+Rationale: Provide a way for the user to return to the normal viewing scale with a single click.
+<LI>Scale to Fit - Changes the scale factor such as the entire graph will fit on the screen at one time.<BR>
+Rationale: Provide a way to get the precise scale factor needed to view the document at the largest possible scale while still being able to see the whole graph on the screen at one time.
+<LI>View at % provides the following options:
+
+<OL>
+<LI>1. Reduced to 25 %<BR>
+Rationale: Allow the user to change the scale factor to 25%.
+<LI>2. Reduced to 50 %<BR>
+Rationale: Allow the user to change the scale factor to 50%.
+<LI>3. Reduced to 75 %<BR>
+Rationale: Allow the user to change the scale factor to 75%.
+<LI>Normal Size<BR>
+Rationale: Allow the user to change the scale factor to 100%.
+<LI>4. Enlarged to 125 %<BR>
+Rationale: Allow the user to change the scale factor to 125%.
+<LI>5. Enlarged to 150 %<BR>
+Rationale: Allow the user to change the scale factor to 150%.
+<LI>6. Enlarged to 175 %<BR>
+Rationale: Allow the user to change the scale factor to 175%.
+<LI>7. Enlarged to 200 %<BR>
+Rationale: Allow the user to change the scale factor to 200%.
+<LI>Scale to Fit<BR>
+Rationale: Provide a way to get the precise scale factor needed to view the document at the largest possible scale while still being able to see the whole graph on the screen at one time.
+<LI>Custom %<BR>
+Rationale: Provide the user with the ability to enter an exact scale factor (between 0 and 200%).
+</OL>
+
+<LI>View Options provides the following options:
+
+<OL>
+<LI>Change All Views Together<BR>
+Rationale: Allow the user to cause all open views to zoom in and out at the same time.
+<LI>Show Horizontal Scroll Bar<BR>
+Rationale: Allow the user to turn off the horizontal scroll bar when it's not needed.
+<LI>Show Vertical Scroll Bar<BR>
+Rationale: Allow the user to turn off the vertical scroll bar when it's not needed.
+</OL>
+
+<LI>Redraw - Forces the graph to redraw, in case something happened to the image on the screen causing it to differ from correct representation.
+
+</OL>
+
+
+<LI><A NAME = "FRD - options operations"></A>The <STRONG>Options</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - options operations">options operations</A>: Customize Toolbars, Save Configuration, and Floating Toolbox.<BR>
+Rationale: Allow the user to change the toolbar.
+
+<OL>
+<LI>Customize Toolbars - Lets the user change what tools are shown on the toolbar.<BR>
+Rationale: Give the user the opportunity to lay out the toolbar in the best way for him/her.
+<LI>Save Configuration - Saves the layout of the toolbar to the system .INI file so the application will look the same from one session to the next.<BR>
+Rationale: Saves the user from having to customize the toolbars every time they use the program.
+<LI>Floating toolbox - Brings up the floating toolbox.<BR>
+Rationale: Provide a trigger for the user to bring up the floating toolbox so the tools in it can be used.
+</OL>
+
+
+<LI><A NAME = "FRD - vertex operations"></A>The <STRONG>Vertex</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - vertex operations">vertex operations</A>: Add, Remove, Random Generate, Select All, and Unselect All<BR>
+Rationale: Allow the user to modify the graph as neccassary.
+
+<OL>
+<LI>Add a vertex to the graph by specifying the 2D coordinates of the new vertex.<BR>
+Rationale: Allow the user to add a vertex to the graph.
+<LI>Remove a vertex from the graph by selecting it on the screen and then clicking on this menu item.<BR>
+Rationale: Allow the user to remove a vertex from the graph.
+<LI>Randomly generate a number of vertices, where the user will be prompted for the number to generate.<BR>
+Rationale: Allow the user to add more vertices to the graph quickly.
+<LI>Select All the vertices at once.<BR>
+Rationale: Allow the user to quickly select all the vertices in the graph at once.
+<LI>Unselect All the vertices at once.<BR>
+Rationale: Allow the user to quickly unselect all the vertices in the graph at once.
+</OL>
+
+
+<LI><A NAME = "FRD - edge operations"></A>The <STRONG>Edge</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - edge operations">edge operations</A>: Add, Remove, Random Generate, Select All, and Unselect All.<BR>
+Rationale: Allow the user to modify the graph as neccassary.
+
+<OL>
+<LI>Add an edge to the graph by specifying the 2D coordinates of its two vertices.<BR>
+Rationale: Allow the user to add an edge to the graph.
+<LI>Remove an edge from the graph by specifying the 2D coordinates of its two vertices. <BR>
+Rationale: Allow the user to remove an edge from the graph.
+<LI>Randomly generate a number of edges using the current vertices. The user will be prompted for the number to generate.<BR>
+Rationale: Allow the user to quickly create new edges for the graph.
+<LI>Select All of the edges at once.<BR>
+Rationale: Allow the user to quickly select all of the edges in the graph at once.
+<LI>Unselect All of the edges at once.<BR>
+Rationale: Allow the user to quickly unselect all of the edges in the graph at once.
+</OL>
+
+
+<LI><A NAME = "FRD - MST"></A>The <STRONG>MST</STRONG> menu will provide for the following <A HREF = "req_spec.html#RS - MST">MST operations</A>: Kruskal's, Prim's, and Both.<BR>
+Rationale: To demonstrate their application and difference.
+
+<OL>
+<LI>Kruskal's<BR>
+Rationale: To illustrate how Kruskal's algorithm works, thus showing the MST property of the graph.
+<LI>Prim's<BR>
+Rationale: To illustrate how Prim's algorithm works, thus showing the MST property of the graph.
+<LI>Combination of both<BR>
+Rationale: To compare the two MST algorithms simultaneously, thus illustrating the differences between them.
+</OL>
+
+
+<LI><A NAME = "FRD - search"></A>The <STRONG>Search</STRONG> menu will provide for the following <A HREF = "req_spec.html#RS - search">search operations</A>: DFS, BFS, and Both.<BR>
+Rationale: To demonstrate the application and difference of the two searches which are commonly taught in computer science algorithm class.
+
+<OL>
+<LI>DFS - Depth First Search<BR>
+Rationale: To illustrate the DFS algorithm and what it does.
+<LI>BFS - Breadth First Search<BR>
+Rationale: To illustrate the BFS algorithm and what it does.
+<LI>Combination of both
+Rationale: To compare the two searches simultaneously, thus illustrating the differences between them.
+</OL>
+
+
+<LI><A NAME = "FRD - other"></A>The <STRONG>Other</STRONG> menu will provide the following <A HREF = "req_spec.html#RS - other">other operations</A>:
+<OL>
+<LI>Shortest Path Search<BR>
+Rationale: Provide demonstration of the shortest path algorithm.
+<LI>Make Complete Graph<BR>
+Rationale: Provide ability to automatically fill in all the edges to form a complete graph.
+
+</OL>
+
+<BR>
+
+</OL>
+
+<BR>
+<BR>
+Back to the <a HREF="index.html">Project Index.</a>
+
+
+</BODY>
+
+</HTML>

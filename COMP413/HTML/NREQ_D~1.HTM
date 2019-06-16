@@ -1,0 +1,50 @@
+<HTML>
+
+<HEAD>
+<TITLE>Non-functional Requirements Definition</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFEE" TEXT="#004080" LINK="#0000FF" VLINK="#408080" ALINK="#FF0000">
+
+<H3>Non-functional Requirements Definition</H3>
+
+<OL>
+<LI>User environment will be GEOS because the user interface will be far superior to any DOS interface we've encountered.
+
+<LI>The total number of vertices will be limited to 50 to keep the number of vertices on screen reasonable.
+
+<LI>Provide Graph visual representation standards.
+<OL>
+<LI>The numbering standard for the vertices will be specified by their 2D coordinates.
+<LI>Directed edges will be specified by arrows pointing to the receiving
+vertex. Undirected edges will have no arrows.
+</OL>
+
+<LI>Provide for a means to zoom in and out.
+<LI>User Input:<BR>
+The main method to modify a graph will be by mouse input. Mouse input will determine where the vertex or edge will be located on the screen. All tasks that involve using the mouse for selection will have an alternate keyboard method that will involve specifying the (X,Y) 2D coordinates of the vertex involved.<BR>
+Rationale: The user must be able to modify the graph.
+
+<LI><A NAME = "FRD - selection"></A> <A HREF = "req_spec.html#RS - selection">Component selection</A> standards.
+
+<OL>
+<LI>To select a vertex, use a mouse and click near the vertex to be selected. 
+<LI>To select an edge, by choosing the two connected vertices.
+<OL>
+<LI>To select a directed edge, click and hold the left mouse button on first vertex and move the mouse to the other vertex and release the mouse button.
+<LI>To select an undirected edge, click and release the left mouse button
+on first vertex and move the mouse to the other vertex and click and release the right mouse button again.
+</OL>
+</OL>
+
+<LI>During any interative operation provide a keyboard command to switch from interative to automatic. 
+
+</OL>
+
+<BR><BR>
+Back to the <a HREF="index.html">Project Index.</a>
+
+
+</BODY>
+
+</HTML>
